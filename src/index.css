@@ -1,0 +1,13 @@
+body{
+  background-color: lightcoral;
+}
+
+img{
+  height: 220px;
+  object-fit: cover;
+}
+
+.card{
+  height: 630px;
+  margin-bottom: 40px;
+}
