@@ -25,7 +25,6 @@ nazionalità
 biografia
 immagine
 riconoscimenti
-immagine
 
 MILESTONE 3
 
