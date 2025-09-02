@@ -11,25 +11,35 @@ const Main = () => {
 
   const fetchActresses = () => {
     axios.get('https://lanciweb.github.io/demo/api/actresses/').then((resp) =>{
-      console.log(resp);
+      setActresses(resp.data);
     });
   };
 
   return (
     <div className="container">
       <div className="row">
-        <div className="col-4">
+        {actresses.map((actress) =>{
+          return(
+            
+          <div className="col-3" key={actress.id}>
           <div className="card">
-            <img src="..." className="card-img-top" alt="..."/>
+            <img src={actress.image} className="card-img-top" alt={actress.name}/>
             <div className="card-body">
-               <p className="card-text">name</p>
-               <p className="card-text">birth_year</p>
-               <p className="card-text">nationality</p>
-               <p className="card-text">biography</p>
-               <p className="card-text">awards</p>
+               <p className="card-text">{actress.name}</p>
+               <p className="card-text">{actress.birth_year}</p>
+               <p className="card-text">{actress.nationality}</p>
+               <p className="card-text">{actress.biography}</p>
+               <p className="card-text">{actress.awards}</p>
             </div>
           </div>
         </div>
+
+
+
+          );
+        })};
+        
+
       </div>
       
     </div>
